@@ -1,13 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+    --bg-color: #1e1e1e;
+    --text-color: #e1e1e1;
+    --text-opacity: 0.4;
+}
+
+.white-mode:root{
+    --bg-color: #e1e1e1;
+    --text-color: #1e1e1e;
+    --text-opacity: 0.8;
+}
+
+body{
+    align-items: center;
+    background-color: var(--bg-color);
+    display: flex;
+    color: var(--text-color);
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+
+}
+
+.container{
+    min-width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .valid-keys{
+    font-size: 7rem;
+    font-weight: bold;
+    border-bottom: 2px solid var(--text-color);
+    min-width: max-content;
+    letter-spacing: 0.3rem;
+}
+
+.container .valid-keys .matched{
+    background-color: var(--text-color);
+    color: var(--bg-color)
+}
+
+.container .valid-keys .remainder{
+    opacity: var(--text-opacity);
+}
+
+.container .typed-keys{
+    font-size: 1.2rem;
+    letter-spacing: 0.4rem;
+    margin-top: 10px;
+    opacity: var(--text-opacity);
+}
+
+.container .completed-words{
+    width: max-content;
+    height: 100vh;
+    overflow-y:scroll ;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: var(--text-opacity);
+    padding: 20px 40px 20px 80px;
+    text-align: left;
+    letter-spacing: 0.1rem;
 }
