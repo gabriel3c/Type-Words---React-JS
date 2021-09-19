@@ -7,7 +7,7 @@ const App = () => {
                 <span className="matched">Gabr</span>
                 <span className="remainder">iel</span>
             </div>
-            <div className="typed-keys">afjdisjfkdlslç</div>
+            <p className="typed-keys">afasdfasdfasdfsadfdisjfkdlslç</p>
             <div className="completed-words">
                 <ol>
                     <li>livro</li>
